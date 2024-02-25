@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Navigation from "../components/Navigation";
 import { ChakraProvider, Box, VStack, FormControl, FormLabel, Input, Button, Heading, Text, Flex, Spacer, useToast } from "@chakra-ui/react";
 import { FaSignInAlt, FaUserPlus, FaGamepad } from "react-icons/fa";
 
@@ -50,32 +51,30 @@ const Index = () => {
   };
 
   return (
-    <ChakraProvider>
-      <Box p={4}>
-        {/* Navigation component will be created and added here in a future update. */}
+    <Box p={4}>
+      <Navigation />
 
-        <VStack spacing={4} align="stretch">
-          <Heading size="lg" mb={4}>
-            Login or Signup
-          </Heading>
-          <FormControl id="email">
-            <FormLabel>Email address</FormLabel>
-            <Input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-          </FormControl>
-          <FormControl id="password">
-            <FormLabel>Password</FormLabel>
-            <Input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-          </FormControl>
-          <Button leftIcon={<FaSignInAlt />} colorScheme="blue" onClick={handleLogin}>
-            Login
-          </Button>
-          <Text textAlign="center">or</Text>
-          <Button leftIcon={<FaUserPlus />} colorScheme="green" onClick={handleSignup}>
-            Signup
-          </Button>
-        </VStack>
-      </Box>
-    </ChakraProvider>
+      <VStack spacing={4} align="stretch">
+        <Heading size="lg" mb={4}>
+          Login or Signup
+        </Heading>
+        <FormControl id="email">
+          <FormLabel>Email address</FormLabel>
+          <Input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+        </FormControl>
+        <FormControl id="password">
+          <FormLabel>Password</FormLabel>
+          <Input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+        </FormControl>
+        <Button leftIcon={<FaSignInAlt />} colorScheme="blue" onClick={handleLogin}>
+          Login
+        </Button>
+        <Text textAlign="center">or</Text>
+        <Button leftIcon={<FaUserPlus />} colorScheme="green" onClick={handleSignup}>
+          Signup
+        </Button>
+      </VStack>
+    </Box>
   );
 };
 
