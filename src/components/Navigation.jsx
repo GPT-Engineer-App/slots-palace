@@ -24,6 +24,9 @@ const Navigation = () => {
       <NavItem to="/slots" icon={<FaGamepad />}>
         Play Slots
       </NavItem>
+      <NavItem to="/terrible-teddies" icon={<FaGamepad />}>
+        Terrible Teddies
+      </NavItem>
       <NavItem to="/about" icon={<FaInfoCircle />}>
         About
       </NavItem>
