@@ -1,7 +1,7 @@
 import React from "react";
 import { Flex, Box, Spacer, Button, Heading } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-import { FaGamepad, FaHome } from "react-icons/fa";
+import { FaGamepad, FaHome, FaInfoCircle } from "react-icons/fa";
 
 const NavItem = ({ to, icon, children }) => (
   <Link to={to}>
@@ -23,6 +23,9 @@ const Navigation = () => {
       </NavItem>
       <NavItem to="/slots" icon={<FaGamepad />}>
         Play Slots
+      </NavItem>
+      <NavItem to="/about" icon={<FaInfoCircle />}>
+        About
       </NavItem>
     </Flex>
   );
