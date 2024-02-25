@@ -58,19 +58,19 @@ const Index = () => {
         <Heading size="lg" mb={4}>
           Login or Signup
         </Heading>
-        <FormControl id="email">
+        <FormControl id="email" isRequired>
           <FormLabel>Email address</FormLabel>
-          <Input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+          <Input type="email" value={email} onChange={(e) => setEmail(e.target.value)} aria-label="Email address" />
         </FormControl>
-        <FormControl id="password">
+        <FormControl id="password" isRequired>
           <FormLabel>Password</FormLabel>
-          <Input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+          <Input type="password" value={password} onChange={(e) => setPassword(e.target.value)} aria-label="Password" />
         </FormControl>
-        <Button leftIcon={<FaSignInAlt />} colorScheme="blue" onClick={handleLogin}>
+        <Button leftIcon={<FaSignInAlt />} colorScheme="blue" onClick={handleLogin} aria-label="Login">
           Login
         </Button>
         <Text textAlign="center">or</Text>
-        <Button leftIcon={<FaUserPlus />} colorScheme="green" onClick={handleSignup}>
+        <Button leftIcon={<FaUserPlus />} colorScheme="green" onClick={handleSignup} aria-label="Signup">
           Signup
         </Button>
       </VStack>

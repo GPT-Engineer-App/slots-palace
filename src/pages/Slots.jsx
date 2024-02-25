@@ -8,7 +8,12 @@ const Slots = () => {
       <Navigation />
       <Box p={4}>
         <Heading>Our Slot Games</Heading>
-        {/* Slot games content will be added here */}
+        <Box p={4} borderWidth="1px" borderRadius="lg" overflow="hidden">
+          <Heading size="md" mb={4}>
+            Coming Soon: Exciting Slot Games!
+          </Heading>
+          {/* Placeholder for slot games content */}
+        </Box>
       </Box>
     </>
   );
