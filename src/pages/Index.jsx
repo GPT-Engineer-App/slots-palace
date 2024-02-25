@@ -52,15 +52,7 @@ const Index = () => {
   return (
     <ChakraProvider>
       <Box p={4}>
-        <Flex mb={6}>
-          <Box p="2">
-            <Heading size="md">Online Slots Casino</Heading>
-          </Box>
-          <Spacer />
-          <Button leftIcon={<FaGamepad />} colorScheme="teal" variant="solid">
-            Play Slots
-          </Button>
-        </Flex>
+        {/* Navigation component will be created and added here in a future update. */}
 
         <VStack spacing={4} align="stretch">
           <Heading size="lg" mb={4}>
